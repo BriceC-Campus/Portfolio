@@ -216,8 +216,8 @@ main {
     body {
         background-image: url(../medias/pictures/travel.gif);
         background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center center;
+        background-size: cover;
+        background-position: center;
         background-attachment: fixed;
         overflow-y: auto;
         overflow-x: hidden;
