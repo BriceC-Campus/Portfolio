@@ -211,7 +211,19 @@ main #row5 a div:hover i {
     display: block;
   }
   main .content1 {
-    width: 90%;
+    height: auto;
+    width: 95%;
+  }
+  main .content2 {
+    height: auto;
+    width: 95%;
+  }
+  main .content3 {
+    height: auto;
+    width: 95%;
+  }
+  main .content4 {
+    height: auto;
   }
   main .content4 iframe {
     width: 95%;

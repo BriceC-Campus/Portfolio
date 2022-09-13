@@ -221,9 +221,19 @@ main {
     main {
         display: block;
         & .content1 {
-            width: 90%;
+            height: auto;
+            width: 95%;
+        }
+        & .content2{
+            height: auto;
+            width: 95%;
+        }
+        & .content3{
+            height: auto;
+            width: 95%;
         }
         & .content4 {
+            height: auto;
             & iframe {
                 width: 95%;
             }
