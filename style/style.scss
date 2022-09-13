@@ -29,6 +29,7 @@ main {
     z-index: 1030;
     & .bg-nav {
         backdrop-filter: $blur;
+        -webkit-backdrop-filter: $blur;
         border-radius: 50px;
         padding: 5px 20px;
         & a {
@@ -51,6 +52,7 @@ section {
     width: 100vw;
     & .desc-bg {
         backdrop-filter: $blur;
+        -webkit-backdrop-filter: $blur;
         border-radius: 50px;
         padding-top: 10px;
         padding-bottom: 10px;
@@ -73,7 +75,8 @@ main {
         transition: ease-in-out 0.3s;
     }
     & .content2 {
-        backdrop-filter: 0;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
         border-radius: 50px;
         padding: 5px 10px;
         width: 95%;
@@ -86,10 +89,12 @@ main {
     }
     & .content2:hover {
         backdrop-filter: $blur;
+        -webkit-backdrop-filter: $blur;
         color: $anthracite;
     }
     & .content3 {
-        backdrop-filter: 0;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
         border-radius: 50px;
         padding: 5px 10px;
         width: 95%;
@@ -102,6 +107,7 @@ main {
     }
     & .content3:hover {
         backdrop-filter: $blur;
+        -webkit-backdrop-filter: $blur;
         color: $anthracite;
     }
     & .content4 {
@@ -115,7 +121,8 @@ main {
         height: 60%;
     }
     & .content6 {
-        backdrop-filter: 0;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
         border-radius: 50px;
         padding: 5px 10px;
         width: 95%;
@@ -129,6 +136,7 @@ main {
         .btn-primary {
             background: none;
             backdrop-filter: $blur;
+            -webkit-backdrop-filter: $blur;
             border: none;
             border-radius: 20px;
             transition: ease-in-out 0.3s;
@@ -161,6 +169,7 @@ main {
         z-index: 200;
         text-align: center;
         backdrop-filter: $blur;
+        -webkit-backdrop-filter: $blur;
         border-radius: 20px;
         & .close-btn {
             position: absolute;
@@ -184,12 +193,14 @@ main {
         & a div {
             border-radius: 60px;
             backdrop-filter: none;
+            -webkit-backdrop-filter: none;
             height: 90%;
             transition: ease-in-out 0.3s;
         }
         & a div:hover {
             margin: 0px;
             backdrop-filter: $blur;
+            -webkit-backdrop-filter: $blur;
             cursor: pointer;
             & i {
                 color: $anthracite;
