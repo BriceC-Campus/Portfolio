@@ -205,7 +205,7 @@ main #row5 a div:hover i {
   body {
     background-image: url(../medias/pictures/travel.gif);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     background-position: center center;
     background-attachment: fixed;
     overflow-y: auto;
