@@ -141,7 +141,7 @@ main {
             border-radius: 20px;
             transition: ease-in-out 0.3s;
         }
-        & .btn-primary:hover{
+        & .btn-primary:hover {
             border: #51fdad 1px solid;
         }
         & label {
@@ -149,7 +149,10 @@ main {
             color: #00000000;
             text-shadow: #51fdad 0px 0px 1px;
         }
-        & input, input:focus, textarea, textarea:focus {
+        & input,
+        input:focus,
+        textarea,
+        textarea:focus {
             color: $primary;
         }
     }
@@ -211,6 +214,11 @@ main {
 
 @media (orientation: portrait) {
     body {
+        background-image: url(../medias/pictures/travel.gif);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
         overflow-y: auto;
         overflow-x: hidden;
     }

@@ -144,7 +144,10 @@ main .content6 label {
   color: rgba(0, 0, 0, 0);
   text-shadow: #51fdad 0px 0px 1px;
 }
-main .content6 input, main .content6 input:focus, main .content6 textarea, main .content6 textarea:focus {
+main .content6 input,
+main .content6 input:focus,
+main .content6 textarea,
+main .content6 textarea:focus {
   color: #fffff0;
 }
 main .content6:hover label {
@@ -200,6 +203,11 @@ main #row5 a div:hover i {
 
 @media (orientation: portrait) {
   body {
+    background-image: url(../medias/pictures/travel.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
     overflow-y: auto;
     overflow-x: hidden;
   }
