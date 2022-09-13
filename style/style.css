@@ -1,0 +1,222 @@
+body {
+  background-image: url(../medias/pictures/travel.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  overflow-y: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  display: inline-flex;
+}
+
+.unavbar {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  bottom: 5px;
+  right: 0;
+  z-index: 1030;
+}
+.unavbar .bg-nav {
+  backdrop-filter: blur(50px) saturate(2);
+  border-radius: 50px;
+  padding: 5px 20px;
+}
+.unavbar .bg-nav a {
+  cursor: pointer;
+}
+.unavbar .bg-nav i {
+  color: #fffff0;
+  transition: ease-in-out 0.3s;
+}
+.unavbar .bg-nav i:hover {
+  color: #303030;
+}
+.unavbar #navI1 {
+  color: #51fdad;
+}
+
+section {
+  height: 100vh;
+  width: 100vw;
+}
+section .desc-bg {
+  backdrop-filter: blur(50px) saturate(2);
+  border-radius: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: ease-in-out 0.3s;
+  width: 95%;
+  color: #303030;
+}
+section .desc-bg h1,
+section .desc-bg h2,
+section .desc-bg p {
+  margin-left: 20px;
+}
+
+main {
+  color: #fffff0;
+}
+main .content1 {
+  width: 60%;
+  transition: ease-in-out 0.3s;
+}
+main .content2 {
+  backdrop-filter: 0;
+  border-radius: 50px;
+  padding: 5px 10px;
+  width: 95%;
+  transition: ease-in-out 0.3s;
+  height: 60%;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 64px;
+}
+main .content2:hover {
+  backdrop-filter: blur(50px) saturate(2);
+  color: #303030;
+}
+main .content3 {
+  backdrop-filter: 0;
+  border-radius: 50px;
+  padding: 5px 10px;
+  width: 95%;
+  transition: ease-in-out 0.3s;
+  height: 60%;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 64px;
+}
+main .content3:hover {
+  backdrop-filter: blur(50px) saturate(2);
+  color: #303030;
+}
+main .content4 {
+  display: flex;
+  justify-content: center;
+  height: 60%;
+}
+main .content4 iframe {
+  position: relative;
+  aspect-ratio: 16/9;
+  height: 95%;
+}
+main .content6 {
+  backdrop-filter: 0;
+  border-radius: 50px;
+  padding: 5px 10px;
+  width: 95%;
+  transition: ease-in-out 0.3s;
+  height: 50%;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 64px;
+}
+main .content6 .form-control,
+main .content6 .btn-primary {
+  background: none;
+  backdrop-filter: blur(50px) saturate(2);
+  border: none;
+  border-radius: 20px;
+  transition: ease-in-out 0.3s;
+}
+main .content6 .btn-primary:hover {
+  border: #51fdad 1px solid;
+}
+main .content6 label {
+  transition: ease-in-out 0.3s;
+  color: rgba(0, 0, 0, 0);
+  text-shadow: #51fdad 0px 0px 1px;
+}
+main .content6 input, main .content6 input:focus, main .content6 textarea, main .content6 textarea:focus {
+  color: #fffff0;
+}
+main .content6:hover label {
+  text-shadow: none;
+  color: #303030;
+}
+main .msgbox-send {
+  display: none;
+  position: fixed;
+  width: fit-content;
+  top: 40%;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  text-align: center;
+  backdrop-filter: blur(50px) saturate(2);
+  border-radius: 20px;
+}
+main .msgbox-send .close-btn {
+  position: absolute;
+  right: 0;
+  padding: 0.5rem;
+  color: #fffff0;
+  cursor: pointer;
+}
+main .msgbox-send .close-btn:hover {
+  color: #303030;
+}
+main #row5 i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fffff0;
+  font-size: 128px;
+}
+main #row5 a div {
+  border-radius: 60px;
+  backdrop-filter: none;
+  height: 90%;
+  transition: ease-in-out 0.3s;
+}
+main #row5 a div:hover {
+  margin: 0px;
+  backdrop-filter: blur(50px) saturate(2);
+  cursor: pointer;
+}
+main #row5 a div:hover i {
+  color: #303030;
+}
+
+@media (orientation: portrait) {
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  main {
+    display: block;
+  }
+  main .content1 {
+    width: 90%;
+  }
+  main .content4 iframe {
+    width: 90%;
+  }
+  main .content6 {
+    font-size: 32px;
+  }
+  .unavbar {
+    position: fixed;
+    left: auto;
+    bottom: 5px;
+    right: 5px;
+    z-index: 1030;
+  }
+  .unavbar .bg-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

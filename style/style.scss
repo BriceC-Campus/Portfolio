@@ -1,0 +1,234 @@
+$primary: #fffff0;
+$anthracite: #303030;
+$blur: blur(50px) saturate(2);
+* {
+    // border: 2px solid #00A256;
+}
+body {
+    background-image: url(../medias/pictures/travel.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    overflow-y: hidden;
+}
+a {
+    text-decoration: none;
+}
+main {
+    display: inline-flex;
+}
+.unavbar {
+    display: flex;
+    justify-content: center;
+    // position
+    position: fixed;
+    left: 0;
+    bottom: 5px;
+    right: 0;
+    z-index: 1030;
+    & .bg-nav {
+        backdrop-filter: $blur;
+        border-radius: 50px;
+        padding: 5px 20px;
+        & a {
+            cursor: pointer;
+        }
+        & i {
+            color: $primary;
+            transition: ease-in-out 0.3s;
+        }
+        & i:hover {
+            color: $anthracite;
+        }
+    }
+    & #navI1 {
+        color: #51fdad;
+    }
+}
+section {
+    height: 100vh;
+    width: 100vw;
+    & .desc-bg {
+        backdrop-filter: $blur;
+        border-radius: 50px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        transition: ease-in-out 0.3s;
+        width: 95%;
+        color: $anthracite;
+        & h1,
+        h2,
+        p {
+            margin-left: 20px;
+        }
+    }
+}
+main {
+    // background: $anthracite;
+    color: $primary;
+    & .content1 {
+        width: 60%;
+        // aspect-ratio: 16 / 9;
+        transition: ease-in-out 0.3s;
+    }
+    & .content2 {
+        backdrop-filter: 0;
+        border-radius: 50px;
+        padding: 5px 10px;
+        width: 95%;
+        // aspect-ratio: 16 / 9;
+        transition: ease-in-out 0.3s;
+        height: 60%;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 64px;
+    }
+    & .content2:hover {
+        backdrop-filter: $blur;
+        color: $anthracite;
+    }
+    & .content3 {
+        backdrop-filter: 0;
+        border-radius: 50px;
+        padding: 5px 10px;
+        width: 95%;
+        // aspect-ratio: 16 / 9;
+        transition: ease-in-out 0.3s;
+        height: 60%;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 64px;
+    }
+    & .content3:hover {
+        backdrop-filter: $blur;
+        color: $anthracite;
+    }
+    & .content4 {
+        & iframe {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            height: 95%;
+        }
+        display: flex;
+        justify-content: center;
+        height: 60%;
+    }
+    & .content6 {
+        backdrop-filter: 0;
+        border-radius: 50px;
+        padding: 5px 10px;
+        width: 95%;
+        // aspect-ratio: 16 / 9;
+        transition: ease-in-out 0.3s;
+        height: 50%;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 64px;
+        & .form-control,
+        .btn-primary {
+            background: none;
+            backdrop-filter: $blur;
+            border: none;
+            border-radius: 20px;
+            transition: ease-in-out 0.3s;
+        }
+        & .btn-primary:hover{
+            border: #51fdad 1px solid;
+        }
+        & label {
+            transition: ease-in-out 0.3s;
+            color: #00000000;
+            text-shadow: #51fdad 0px 0px 1px;
+        }
+        & input, input:focus, textarea, textarea:focus {
+            color: $primary;
+        }
+    }
+    & .content6:hover {
+        & label {
+            text-shadow: none;
+            color: $anthracite;
+        }
+    }
+    .msgbox-send {
+        display: none;
+        position: fixed;
+        width: fit-content;
+        top: 40%;
+        left: 0;
+        right: 0;
+        z-index: 200;
+        text-align: center;
+        backdrop-filter: $blur;
+        border-radius: 20px;
+        & .close-btn {
+            position: absolute;
+            right: 0;
+            padding: 0.5rem;
+            color: $primary;
+            cursor: pointer;
+        }
+        & .close-btn:hover {
+            color: $anthracite;
+        }
+    }
+    #row5 {
+        & i {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $primary;
+            font-size: 128px;
+        }
+        & a div {
+            border-radius: 60px;
+            backdrop-filter: none;
+            height: 90%;
+            transition: ease-in-out 0.3s;
+        }
+        & a div:hover {
+            margin: 0px;
+            backdrop-filter: $blur;
+            cursor: pointer;
+            & i {
+                color: $anthracite;
+            }
+        }
+    }
+}
+
+@media (orientation: portrait) {
+    body {
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    main {
+        display: block;
+        & .content1 {
+            width: 90%;
+        }
+        & .content4 {
+            & iframe {
+                width: 90%;
+            }
+        }
+        & .content6 {
+            font-size: 32px;
+        }
+    }
+    .unavbar {
+        // position
+        position: fixed;
+        left: auto;
+        bottom: 5px;
+        right: 5px;
+        z-index: 1030;
+        & .bg-nav {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 5px;
+        }
+    }
+}
