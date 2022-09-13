@@ -5,6 +5,7 @@ body {
   background-position: center center;
   background-attachment: fixed;
   overflow-y: hidden;
+  box-sizing: border-box;
 }
 
 a {
@@ -213,7 +214,7 @@ main #row5 a div:hover i {
     width: 90%;
   }
   main .content4 iframe {
-    width: 90%;
+    width: 95%;
   }
   main .content6 {
     font-size: 32px;
@@ -221,8 +222,8 @@ main #row5 a div:hover i {
   .unavbar {
     position: fixed;
     left: auto;
-    bottom: 5px;
-    right: 5px;
+    bottom: 25px;
+    right: 25px;
     z-index: 1030;
   }
   .unavbar .bg-nav {

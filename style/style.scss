@@ -11,6 +11,7 @@ body {
     background-position: center center;
     background-attachment: fixed;
     overflow-y: hidden;
+    box-sizing: border-box;
 }
 a {
     text-decoration: none;
@@ -224,7 +225,7 @@ main {
         }
         & .content4 {
             & iframe {
-                width: 90%;
+                width: 95%;
             }
         }
         & .content6 {
@@ -235,8 +236,8 @@ main {
         // position
         position: fixed;
         left: auto;
-        bottom: 5px;
-        right: 5px;
+        bottom: 25px;
+        right: 25px;
         z-index: 1030;
         & .bg-nav {
             display: flex;
