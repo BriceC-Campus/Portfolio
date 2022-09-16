@@ -11,13 +11,16 @@ body {
     background-position: center center;
     background-attachment: fixed;
     overflow-y: hidden;
+    overflow-x: auto;
     box-sizing: border-box;
 }
 a {
     text-decoration: none;
 }
 main {
-    display: inline-flex;
+    & .container-fluid {
+        display: inline-flex;
+    }
 }
 .unavbar {
     display: flex;
@@ -112,14 +115,14 @@ main {
         color: $anthracite;
     }
     & .content4 {
+        display: flex;
+        justify-content: center;
+        width: 95%;
         & iframe {
             position: relative;
             aspect-ratio: 16 / 9;
-            height: 95%;
+            min-width: 70%;
         }
-        display: flex;
-        justify-content: center;
-        height: 60%;
     }
     & .content6 {
         backdrop-filter: none;
@@ -186,7 +189,7 @@ main {
             color: $anthracite;
         }
     }
-    #row5 {
+    .row5 {
         & i {
             display: flex;
             justify-content: center;
@@ -219,24 +222,23 @@ main {
         overflow-x: hidden;
     }
     main {
-        display: block;
+        & .container-fluid {
+            display: block;
+        }
         & .content1 {
             height: auto;
             width: 95%;
         }
-        & .content2{
+        & .content2 {
             height: auto;
             width: 95%;
         }
-        & .content3{
+        & .content3 {
             height: auto;
             width: 95%;
         }
         & .content4 {
-            height: auto;
-            & iframe {
-                width: 95%;
-            }
+            min-width: 95%;
         }
         & .content6 {
             font-size: 32px;

@@ -5,6 +5,7 @@ body {
   background-position: center center;
   background-attachment: fixed;
   overflow-y: hidden;
+  overflow-x: auto;
   box-sizing: border-box;
 }
 
@@ -12,7 +13,7 @@ a {
   text-decoration: none;
 }
 
-main {
+main .container-fluid {
   display: inline-flex;
 }
 
@@ -109,12 +110,12 @@ main .content3:hover {
 main .content4 {
   display: flex;
   justify-content: center;
-  height: 60%;
+  width: 95%;
 }
 main .content4 iframe {
   position: relative;
   aspect-ratio: 16/9;
-  height: 95%;
+  min-width: 70%;
 }
 main .content6 {
   backdrop-filter: none;
@@ -158,6 +159,8 @@ main .content6:hover label {
 main .msgbox-send {
   display: none;
   position: fixed;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   top: 40%;
   left: 0;
@@ -178,27 +181,27 @@ main .msgbox-send .close-btn {
 main .msgbox-send .close-btn:hover {
   color: #303030;
 }
-main #row5 i {
+main .row5 i {
   display: flex;
   justify-content: center;
   align-items: center;
   color: #fffff0;
   font-size: 128px;
 }
-main #row5 a div {
+main .row5 a div {
   border-radius: 60px;
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
   height: 90%;
   transition: ease-in-out 0.3s;
 }
-main #row5 a div:hover {
+main .row5 a div:hover {
   margin: 0px;
   backdrop-filter: blur(50px) saturate(2);
   -webkit-backdrop-filter: blur(50px) saturate(2);
   cursor: pointer;
 }
-main #row5 a div:hover i {
+main .row5 a div:hover i {
   color: #303030;
 }
 
@@ -207,7 +210,7 @@ main #row5 a div:hover i {
     overflow-y: auto;
     overflow-x: hidden;
   }
-  main {
+  main .container-fluid {
     display: block;
   }
   main .content1 {
@@ -223,10 +226,7 @@ main #row5 a div:hover i {
     width: 95%;
   }
   main .content4 {
-    height: auto;
-  }
-  main .content4 iframe {
-    width: 95%;
+    min-width: 95%;
   }
   main .content6 {
     font-size: 32px;
@@ -244,6 +244,4 @@ main #row5 a div:hover i {
     align-items: center;
     padding: 5px;
   }
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

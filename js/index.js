@@ -1,9 +1,11 @@
 // -- variables
 // const
 const orientationv = window.matchMedia("(orientation: portrait)");
+const orientationh = window.matchMedia("(orientation: landscape)");
+const minH = window.matchMedia("(max-height: 768px)");
 const primary = "#fffff0";
 const cSelected = "#51FDAD";
-
+console.log(minH.matches);
 // let
 let scrollv = 0;
 // -- functions
@@ -106,7 +108,7 @@ const closeBtn = document.querySelector(".close-btn");
 const msgboxSend = document.querySelector(".msgbox-send");
 btnFormSend.onclick = (e) => {
 	msgboxSend.style.display = "block";
-	document.querySelector(".form1").reset();
+	// document.querySelector(".form1").reset();
 };
 closeBtn.onclick = (e) => {
 	msgboxSend.style.display = "none";
