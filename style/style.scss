@@ -63,56 +63,50 @@ section {
         transition: ease-in-out 0.3s;
         width: 95%;
         color: $anthracite;
-        & h1,
-        h2,
+        & h2,
+        h3,
         p {
             margin-left: 20px;
         }
     }
 }
+
+// mixin for main use
+@mixin c-404 {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border-radius: 50px;
+    padding: 5px 10px;
+    width: 95%;
+    transition: ease-in-out 0.3s;
+    height: 60%;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 64px;
+}
+@mixin c-404-hover {
+    backdrop-filter: $blur;
+    -webkit-backdrop-filter: $blur;
+    color: $anthracite;
+}
+//
 main {
-    // background: $anthracite;
     color: $primary;
     & .content1 {
         width: 60%;
-        // aspect-ratio: 16 / 9;
         transition: ease-in-out 0.3s;
     }
     & .content2 {
-        backdrop-filter: none;
-        -webkit-backdrop-filter: none;
-        border-radius: 50px;
-        padding: 5px 10px;
-        width: 95%;
-        // aspect-ratio: 16 / 9;
-        transition: ease-in-out 0.3s;
-        height: 60%;
-        text-align: center;
-        vertical-align: middle;
-        font-size: 64px;
+        @include c-404;
     }
     & .content2:hover {
-        backdrop-filter: $blur;
-        -webkit-backdrop-filter: $blur;
-        color: $anthracite;
+        @include c-404-hover;
     }
     & .content3 {
-        backdrop-filter: none;
-        -webkit-backdrop-filter: none;
-        border-radius: 50px;
-        padding: 5px 10px;
-        width: 95%;
-        // aspect-ratio: 16 / 9;
-        transition: ease-in-out 0.3s;
-        height: 60%;
-        text-align: center;
-        vertical-align: middle;
-        font-size: 64px;
+        @include c-404;
     }
     & .content3:hover {
-        backdrop-filter: $blur;
-        -webkit-backdrop-filter: $blur;
-        color: $anthracite;
+        @include c-404-hover;
     }
     & .content4 {
         display: flex;
@@ -122,6 +116,7 @@ main {
             position: relative;
             aspect-ratio: 16 / 9;
             min-width: 70%;
+            border: none;
         }
     }
     & .content6 {
@@ -130,7 +125,6 @@ main {
         border-radius: 50px;
         padding: 5px 10px;
         width: 95%;
-        // aspect-ratio: 16 / 9;
         transition: ease-in-out 0.3s;
         height: 50%;
         text-align: center;
@@ -215,7 +209,12 @@ main {
         }
     }
 }
-
+// mixin for vertical screens
+@mixin c-default {
+    height: auto;
+    width: 95%;
+}
+// for vertical screens
 @media (orientation: portrait) {
     body {
         overflow-y: auto;
@@ -226,16 +225,13 @@ main {
             display: block;
         }
         & .content1 {
-            height: auto;
-            width: 95%;
+            @include c-default;
         }
         & .content2 {
-            height: auto;
-            width: 95%;
+            @include c-default;
         }
         & .content3 {
-            height: auto;
-            width: 95%;
+            @include c-default;
         }
         & .content4 {
             min-width: 95%;
@@ -252,6 +248,7 @@ main {
         right: 25px;
         z-index: 1030;
         & .bg-nav {
+            // layout
             display: flex;
             flex-direction: column;
             align-items: center;

@@ -60,8 +60,8 @@ section .desc-bg {
   width: 95%;
   color: #303030;
 }
-section .desc-bg h1,
 section .desc-bg h2,
+section .desc-bg h3,
 section .desc-bg p {
   margin-left: 20px;
 }
@@ -116,6 +116,7 @@ main .content4 iframe {
   position: relative;
   aspect-ratio: 16/9;
   min-width: 70%;
+  border: none;
 }
 main .content6 {
   backdrop-filter: none;

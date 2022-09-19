@@ -5,11 +5,10 @@ const orientationh = window.matchMedia("(orientation: landscape)");
 const minH = window.matchMedia("(max-height: 768px)");
 const primary = "#fffff0";
 const cSelected = "#51FDAD";
-console.log(minH.matches);
 // let
 let scrollv = 0;
 // -- functions
-function isNegative(num) {
+function isNegative(num) { // vérifie que le nombre donné soit négatif et retourne vrai ou faux
 	if (typeof num === "number" && Math.sign(num) === -1) {
 		return true;
 	}
@@ -66,6 +65,7 @@ onwheel = (e) => {
 	}
 };
 
+// Gestion des couleurs des icones nav en fonction du scroll
 window.onscroll = (e) => {
 	// -- variables
 	// const
@@ -79,24 +79,20 @@ window.onscroll = (e) => {
 	let hActiveV = window.scrollY / window.innerHeight;
 	let wActiveV = window.scrollX / window.innerWidth;
 	let arrayNavI = [navI1, navI2, navI3, navI4, navI5, navI6];
-	// console.log(wActiveV);
-	if (orientationv.matches) {
-		for (let i = 0; i < arrayNavI.length; i++) {
-			// console.log(Math.round(hActiveV));
-			if (Math.round(hActiveV) == i) {
-				arrayNavI[i].style.color = cSelected;
-				console.log(cSelected);
-			} else {
-				arrayNavI[i].style.color = primary;
+	if (orientationv.matches) { // si vertical scroll
+		for (let i = 0; i < arrayNavI.length; i++) { // pour chaque icone
+			if (Math.round(hActiveV) == i) { // si icone égal scroll
+				arrayNavI[i].style.color = cSelected; // met la couleur de selection
+			} else { // sinon pour toutes les autres icones
+				arrayNavI[i].style.color = primary; // met la couleur par défaut
 			}
 		}
-	} else {
+	} else { // sinon
 		for (let i = 0; i < arrayNavI.length; i++) {
-			// console.log(Math.round(wActiveV));
-			if (Math.round(wActiveV) == i) {
-				arrayNavI[i].style.color = cSelected;
-			} else {
-				arrayNavI[i].style.color = primary;
+			if (Math.round(wActiveV) == i) { // si icone égal scroll
+				arrayNavI[i].style.color = cSelected; // met la couleur de selection
+			} else { // sinon pour toutes les autres icones
+				arrayNavI[i].style.color = primary; // met la couleur par défaut
 			}
 		}
 	}
@@ -108,7 +104,7 @@ const closeBtn = document.querySelector(".close-btn");
 const msgboxSend = document.querySelector(".msgbox-send");
 btnFormSend.onclick = (e) => {
 	msgboxSend.style.display = "block";
-	// document.querySelector(".form1").reset();
+	setTimeout(() => {document.querySelector(".form1").reset();}, 2000);
 };
 closeBtn.onclick = (e) => {
 	msgboxSend.style.display = "none";
