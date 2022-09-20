@@ -131,7 +131,7 @@ main .content6 {
   font-size: 64px;
 }
 main .content6 .form-control,
-main .content6 .btn-primary {
+main .content6 .btn-form-send {
   background: none;
   backdrop-filter: blur(50px) saturate(2);
   -webkit-backdrop-filter: blur(50px) saturate(2);
@@ -139,7 +139,8 @@ main .content6 .btn-primary {
   border-radius: 20px;
   transition: ease-in-out 0.3s;
 }
-main .content6 .btn-primary:hover {
+main .content6 .form-control:hover,
+main .content6 .btn-form-send:hover {
   border: #51fdad 1px solid;
 }
 main .content6 label {
