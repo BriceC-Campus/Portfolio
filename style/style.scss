@@ -89,72 +89,74 @@ section {
 // Desktop css
 main {
     color: $primary;
-    & .content1 {
-        width: 60%;
-        transition: ease-in-out 0.3s;
-    }
-    & .content2 {
-        @include c-404;
-    }
-    & .content2:hover {
-        @include c-404-hover;
-    }
-    & .content3 {
-        @include c-404;
-    }
-    & .content3:hover {
-        @include c-404-hover;
-    }
-    & .content4 {
-        display: flex;
-        justify-content: center;
-        width: 95%;
-        & iframe {
-            position: relative;
-            aspect-ratio: 16 / 9;
-            min-width: 70%;
-            border: none;
-        }
-    }
-    & .content6 {
-        backdrop-filter: none;
-        -webkit-backdrop-filter: none;
-        border-radius: 50px;
-        padding: 5px 10px;
-        width: 95%;
-        transition: ease-in-out 0.3s;
-        height: 50%;
-        text-align: center;
-        vertical-align: middle;
-        font-size: 64px;
-        & .form-control,
-        .btn-primary {
-            background: none;
-            backdrop-filter: $blur;
-            -webkit-backdrop-filter: $blur;
-            border: none;
-            border-radius: 20px;
+    & .content {
+        &1 {
+            width: 60%;
             transition: ease-in-out 0.3s;
         }
-        & .btn-primary:hover {
-            border: #51fdad 1px solid;
+        &2 {
+            @include c-404;
         }
-        & label {
+        &2:hover {
+            @include c-404-hover;
+        }
+        &3 {
+            @include c-404;
+        }
+        &3:hover {
+            @include c-404-hover;
+        }
+        &4 {
+            display: flex;
+            justify-content: center;
+            width: 95%;
+            & iframe {
+                position: relative;
+                aspect-ratio: 16 / 9;
+                min-width: 70%;
+                border: none;
+            }
+        }
+        &6 {
+            backdrop-filter: none;
+            -webkit-backdrop-filter: none;
+            border-radius: 50px;
+            padding: 5px 10px;
+            width: 95%;
             transition: ease-in-out 0.3s;
-            color: #00000000;
-            text-shadow: #51fdad 0px 0px 1px;
+            height: 50%;
+            text-align: center;
+            vertical-align: middle;
+            font-size: 64px;
+            & .form-control,
+            .btn-primary {
+                background: none;
+                backdrop-filter: $blur;
+                -webkit-backdrop-filter: $blur;
+                border: none;
+                border-radius: 20px;
+                transition: ease-in-out 0.3s;
+            }
+            & .btn-primary:hover {
+                border: #51fdad 1px solid;
+            }
+            & label {
+                transition: ease-in-out 0.3s;
+                color: #00000000;
+                text-shadow: #51fdad 0px 0px 1px;
+            }
+            & input,
+            input:focus,
+            textarea,
+            textarea:focus {
+                color: $primary;
+            }
         }
-        & input,
-        input:focus,
-        textarea,
-        textarea:focus {
-            color: $primary;
-        }
-    }
-    & .content6:hover {
-        & label {
-            text-shadow: none;
-            color: $anthracite;
+        &6:hover {
+            & label {
+                text-shadow: none;
+                color: $anthracite;
+            }
         }
     }
     .msgbox-send {
@@ -221,20 +223,22 @@ main {
         & .container-fluid {
             display: block;
         }
-        & .content1 {
-            @include c-default;
-        }
-        & .content2 {
-            @include c-default;
-        }
-        & .content3 {
-            @include c-default;
-        }
-        & .content4 {
-            min-width: 95%;
-        }
-        & .content6 {
-            font-size: 32px;
+        & .content {
+            &1 {
+                @include c-default;
+            }
+            &2 {
+                @include c-default;
+            }
+            &3 {
+                @include c-default;
+            }
+            &4 {
+                min-width: 95%;
+            }
+            &6 {
+                font-size: 32px;
+            }
         }
     }
     .unavbar {
